@@ -41,4 +41,4 @@
 
 <!-- Grave aqui todo aprendizado novo sobre o FluentCRM, com data. -->
 
-- _(vazio por enquanto — vai sendo preenchido conforme a equipe usar)_
+- _2026-07-08 — os campos de rodapé `{{crm.business_name}}` e `{{crm.business_address}}` só renderizam se as **Business Settings do FluentCRM estiverem preenchidas**. Se vierem vazios no e-mail, checar essa configuração antes de suspeitar do HTML. (Confirmado no projeto Hotel Fazenda Ramon, onde o FluentCRM é remetente secundário; o HTML é montado no Stripo — ver `plataformas/stripo.md`.)_

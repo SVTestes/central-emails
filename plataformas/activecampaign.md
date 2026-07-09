@@ -24,8 +24,19 @@
 ## Como o HTML é tratado
 
 - ✅ Dois editores: **Email Designer** (novo, 2022) e **Classic Designer**. Para HTML montado à mão, importe como HTML personalizado.
+- ✅ Nas contas da SV, o HTML é montado no **Stripo** e importado no AC — então **leia também `plataformas/stripo.md`** (hierarquia `esd-*`, `esd-block-html`, VML Outlook, limite de 102 KB do Gmail, timers).
 - ⚠️ Mantenha CSS inline e layout em tabela (padrão de e-mail). O AC processa/reescreve parte do CSS — não confie em `<style>` no head.
 - ⚠️ Largura ~600px, imagens em URL absoluta.
+
+## Validador do AC — erros que ele acusa
+
+- ✅ **Toda tag `<a>` de imagem precisa ter `href`.** Se faltar, o validador do AC dispara o aviso
+  de link inválido **"Empty Text/Image"** e trava a revisão. Correção padrão: apontar links de imagem
+  sem destino próprio para uma URL válida (ex.: o link de contato/WhatsApp do cliente).
+- ✅ **`%RSS-LOOP%`** (feeds de blog) deve ficar **dentro de um `<td>`**, nunca solto em `<tbody>`.
+- ✅ CDN de imagens da conta: `content.app-us1.com`. Ícones sociais: `stripo.cluster.app-us1.com`.
+- ✅ Merge tags que aparecem em praticamente todo e-mail SV: `%FIRSTNAME%`, `%EMAIL%`,
+  `%UNSUBSCRIBELINK%`, `%SENDER-INFO-SINGLELINE%`.
 
 ## Boas práticas específicas do AC
 
